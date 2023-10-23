@@ -12,7 +12,8 @@ function AboutMe() {
           <Image
             src={laptop}
             width={laptop.width / 2.5}
-            height={laptop.height / 2.5}
+            height={0}
+            style={{ height: "auto" }}
             alt="laptop"
             className="rounded-xl"
           />
