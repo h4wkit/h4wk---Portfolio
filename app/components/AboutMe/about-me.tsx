@@ -6,7 +6,10 @@ import emoji from "@/public/working-emoji.png";
 
 function AboutMe() {
   return (
-    <div className="bg-white py-28 flex items-center justify-center w-full">
+    <div
+      className="bg-white py-28 flex items-center justify-center w-full px-5"
+      id="about"
+    >
       <div className="flex flex-col lg:flex-row max-w-[1070px] space-y-12 lg:space-y-0 lg:space-x-20 justify-center items-center">
         <div className="relative px-10 lg:px-0 lg:w-1/2 flex justify-center">
           <Image
@@ -17,7 +20,7 @@ function AboutMe() {
             alt="laptop"
             className="rounded-xl"
           />
-          <div className="absolute rounded-full w-[200px] h-[200px] items-center justify-center bg-white -right-16 -bottom-6  hidden lg:flex">
+          <div className="absolute rounded-full w-[200px] h-[200px] items-center justify-center bg-white -right-16 -bottom-24  hidden lg:flex">
             <Image
               src={text}
               width={180}

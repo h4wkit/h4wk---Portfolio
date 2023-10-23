@@ -26,26 +26,30 @@ function MinMenuModal() {
       <nav>
         <ul className="flex flex-col gap-y-12 text-center text-black/80">
           <Link
-            href={"#"}
+            href={"#home"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer text-2xl"
+            onClick={minMenu.onClose}
           >
             Home
           </Link>
           <Link
-            href={"#"}
+            href={"#about"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer text-2xl"
+            onClick={minMenu.onClose}
           >
             About
           </Link>
           <Link
-            href={"#"}
+            href={"#projects"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer text-2xl"
+            onClick={minMenu.onClose}
           >
             Projects
           </Link>
           <Link
-            href={"#"}
+            href={"#contact"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer text-2xl"
+            onClick={minMenu.onClose}
           >
             Contact
           </Link>

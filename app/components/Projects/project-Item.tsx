@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,6 +12,7 @@ interface ProjectItemProps {
   technologies: Technology[];
   github: string;
   demoLink: string;
+  reversed: boolean;
 }
 
 interface Technology {
@@ -19,6 +21,7 @@ interface Technology {
 }
 
 function ProjectItem({
+  reversed,
   image,
   gif,
   label,
@@ -29,8 +32,19 @@ function ProjectItem({
   demoLink,
 }: ProjectItemProps) {
   return (
-    <article className="rounded-2xl shadow-md max-w-[990px] bg-white w-full flex flex-col lg:flex-row p-5 space-x-6 justify-center items-center">
-      <div className="max-w-[530px] w-full bg-black/10 h-[350px] rounded-2xl" />
+    <article
+      className={cn(
+        "rounded-2xl shadow-md max-w-[990px] bg-white w-full flex flex-col p-5 justify-center lg:justify-between items-center",
+        reversed ? "lg:flex-row-reverse" : "lg:flex-row"
+      )}
+    >
+      <Image
+        src={image}
+        width={0}
+        height={200}
+        alt="gif"
+        style={{ width: "auto" }}
+      />
 
       <div className="max-w-[350px] space-y-5 py-5 text-center">
         <h1 className="font-bold text-black/80 text-lg">
@@ -56,13 +70,15 @@ function ProjectItem({
           <Link
             href={github}
             className="flex hover:text-blue-500 transition duration-200 space-x-2 text-black/80"
+            target="_blank"
           >
             <p>Code</p>
             <Github />
           </Link>{" "}
           <Link
-            href={github}
+            href={demoLink}
             className="flex hover:text-blue-500 transition duration-200 space-x-2 text-black/80"
+            target="_blank"
           >
             <p>Live Demo</p>
             <ExternalLink />
