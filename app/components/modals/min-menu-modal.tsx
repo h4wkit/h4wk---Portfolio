@@ -24,7 +24,7 @@ function MinMenuModal() {
         onClick={handleClose}
       />
       <nav>
-        <ul className="flex flex-col gap-y-12 text-center">
+        <ul className="flex flex-col gap-y-12 text-center text-black/80">
           <Link
             href={"#"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer text-2xl"

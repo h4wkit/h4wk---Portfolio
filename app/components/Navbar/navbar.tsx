@@ -13,11 +13,11 @@ function Navbar() {
 
   return (
     <div className="w-full h-20 flex justify-between px-10 items-center shadow-lg shadow-gray-100 fixed top-0 z-50 bg-white">
-      <Link href={"body"} className="text-xl font-black">
+      <Link href={"#home"} className="text-xl font-bold text-black/80">
         Kacper.dev
       </Link>
       <nav className="hidden md:block">
-        <ul className="flex gap-x-6">
+        <ul className="flex gap-x-6 text-black/80">
           <Link
             href={"#"}
             className="hover:text-blue-500 transition duration-200 cursor-pointer"
@@ -46,7 +46,7 @@ function Navbar() {
       </nav>
       <nav className="block md:hidden">
         <Menu
-          className="h-8 w-8 text-black hover:text-blue-500 transition duration-200 cursor-pointer"
+          className="h-8 w-8 text-black/80 hover:text-blue-500 transition duration-200 cursor-pointer"
           onClick={handleMenuToggle}
         />
       </nav>

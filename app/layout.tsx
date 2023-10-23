@@ -4,7 +4,10 @@ import "./globals.css";
 import Navbar from "@/app/components/Navbar/navbar";
 import ModalProvider from "@/app/providers/modal-provider";
 
-const font = Poppins({ subsets: ["latin"], weight: "500" });
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "500", "900", "800", "700", "600"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",

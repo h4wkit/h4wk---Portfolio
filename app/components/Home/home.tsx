@@ -4,25 +4,21 @@ import avatar from "@/public/avatar.png";
 
 function Home() {
   return (
-    <div className="h-full bg-gray-50">
+    <div className="min-h-full bg-gray-50 pb-24 lg:py-36">
       <section
         id="home"
-        className="w-full flex flex-col items-center justify-center px-10 pt-36 lg:pt-80"
+        className="w-full flex flex-col items-center justify-center px-10 pt-36"
       >
         <article className="max-w-[950px] flex w-full flex-col-reverse lg:flex-row items-center">
-          <article className="flex flex-col space-y-10 mt-10 lg:mt-0 text-center">
-            <h1 className="text-5xl font-black">
+          <article className="flex flex-col space-y-10 mt-10 lg:mt-0 text-center lg:text-left">
+            <h1 className="text-4xl lg:text-6xl font-bold text-black/80">
               Fullstack Web
               <br /> Developer <span className="">👋🏻</span>
             </h1>
-            <p className="max-w-[500px] text-gray-500">
+            <p className="max-w-[500px] text-black/80">
               Hi, I'm Stefan Topalovic. A passionate Front-end React Developer
               based in Belgrade, Serbia. 📍
             </p>
-            <article className="flex space-x-5">
-              <Github className="h-7 w-7" />
-              <Linkedin className="h-7 w-7" />
-            </article>
           </article>
           <div
             className="overflow-hidden border-2 radius-animation w-80 h-80 relative"
