@@ -5,7 +5,6 @@ import Link from "next/link";
 
 interface ProjectItemProps {
   image: string;
-  gif: string;
   label: string;
   date: string;
   desc: string;
@@ -23,7 +22,6 @@ interface Technology {
 function ProjectItem({
   reversed,
   image,
-  gif,
   label,
   date,
   desc,
@@ -34,27 +32,25 @@ function ProjectItem({
   return (
     <article
       className={cn(
-        "rounded-2xl shadow-md max-w-[990px] bg-white w-full flex flex-col p-5 justify-center lg:justify-between items-center",
+        "rounded-2xl shadow-md lg:w-[990px] bg-white flex flex-col p-5 justify-center lg:justify-between items-center",
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       )}
     >
       <Image
         src={image}
-        width={0}
-        height={200}
+        width={500}
+        height={0}
         alt="gif"
-        style={{ width: "auto" }}
+        style={{ height: "auto" }}
       />
+
+      {/* <div className="w-full lg:w-[500px] h-[350px] flex-shrink bg-blue-500" /> */}
 
       <div className="max-w-[350px] space-y-5 py-5 text-center">
         <h1 className="font-bold text-black/80 text-lg">
-          CAR RENTAL <span className="text-sm">(FEBUARY 2023)</span>
+          {label} <span className="text-sm">({date})</span>
         </h1>
-        <p className=" text-black/50 text-md">
-          A car rental website is an online platform that allows users to rent
-          cars for personal or business use. The website provides an interface
-          for searching, comparing, and reserving cars.
-        </p>
+        <p className=" text-black/50 text-md">{desc}</p>
         <div className="flex flex-wrap gap-2 justify-center">
           {technologies.map((technology, index) => (
             <div

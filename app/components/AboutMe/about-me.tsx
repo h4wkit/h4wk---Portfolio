@@ -6,7 +6,7 @@ import emoji from "@/public/working-emoji.png";
 
 function AboutMe() {
   return (
-    <div
+    <section
       className="bg-white py-28 flex items-center justify-center w-full px-5"
       id="about"
     >
@@ -34,10 +34,10 @@ function AboutMe() {
         <div className="lg:w-1/2 text-center lg:text-left px-5 lg:px-0 max-w-[500px]">
           <h2 className="text-blue-500 font-extrabold text-lg">ABOUT ME</h2>
           <h1 className="py-5 text-2xl font-bold text-black/80">
-            A dedicated Front-end Developer based in Belgrade, Serbia 📍
+            A dedicated Fullstack Developer based in Poland 😎
           </h1>
           <p className="text-black/50">
-            As a Junior Front-End Developer, I possess an impressive arsenal of
+            As a Junior Fullstack Developer, I possess an impressive arsenal of
             skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel
             in designing and maintaining responsive websites that offer a smooth
             user experience. My expertise lies in crafting dynamic, engaging
@@ -48,7 +48,7 @@ function AboutMe() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default AboutMe;

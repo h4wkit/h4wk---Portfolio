@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar/navbar";
 import ModalProvider from "@/app/providers/modal-provider";
+import Footer from "@/app/components/Footer/footer";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ModalProvider />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
