@@ -80,8 +80,8 @@ function Home() {
               <br /> Developer <span className="wave">👋🏻</span>
             </h1>
             <p className="max-w-[500px] text-black/50">
-              Hi, I'm Kacper Siniło. A passionate Fullstack Developer, who is
-              also a gym rat, and a coffee enjoyer. 💪☕
+              Hi, Im Kacper Siniło. A passionate Fullstack Developer, who
+              is also a gym rat, and a coffee enjoyer. 💪☕
             </p>
             <div className="flex space-x-4 text-black/50 justify-center lg:justify-start">
               <Link href={"https://github.com/kacper3123"} target="_blank">
@@ -126,12 +126,21 @@ function Home() {
           <div className="grid grid-cols-5 gap-3 md:flex">
             {skills.map((skill, index) => (
               <div key={index} className="relative mx-2">
-                <img
+                {/* <Image
                   src={skill.src}
                   alt={skill.alt}
+                  width={50}
+                  height={50}
                   className="hover:scale-105 transition duration-200 peer hover:cursor-help"
                   loading="eager"
-                />
+                /> */}
+                <object
+                  type="image/svg+xml"
+                  data={skill.src}
+                  className="hover:scale-105 transition duration-200 peer hover:cursor-help"
+                  width={50}
+                ></object>
+
                 {skill.text && (
                   <div
                     className="peer hidden absolute peer-hover:block rounded-full px-2 py-1 text-white -left-10 -bottom-12 min-w-[130px] text-center font-bold z-50"
