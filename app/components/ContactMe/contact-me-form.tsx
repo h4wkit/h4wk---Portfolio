@@ -60,9 +60,9 @@ const ContactMeForm = () => {
     <form
       onSubmit={handleSubmit((formData, event) => handleSend(formData, event))}
     >
-      <div className="flex flex-col gap-5">
-        <p className="text-red-500">{error}</p>
-        <span className="text-green-500">{success}</span>
+      <p className="text-green-500 max-w-[360px]">{error}</p>
+      <p className="text-green-500 max-w-[360px]">{success}</p>
+      <div className="flex flex-col gap-5 mt-4">
         <input
           id="name"
           placeholder="Your Name"
