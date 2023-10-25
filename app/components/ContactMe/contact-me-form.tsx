@@ -48,7 +48,7 @@ const ContactMeForm = () => {
       }
 
       console.log(formData);
-      setSuccess("The message has been succesfully sent. Have a good day!");
+      setSuccess("The message has been successfully sent. Have a good day!");
       reset();
     } catch (error: any) {
       setError("Something went wrong, try again.");
