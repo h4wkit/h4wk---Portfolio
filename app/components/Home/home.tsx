@@ -4,6 +4,7 @@ import { Github } from "lucide-react";
 
 import cv_icon from "@/public/cv-icon.png";
 import avatar from "@/public/avatar.png";
+import hand from "@/public/hand.png";
 
 function Home() {
   const skills = [
@@ -79,7 +80,10 @@ function Home() {
           <article className="flex flex-col space-y-10 mt-10 lg:mt-0 text-center lg:text-left">
             <h1 className="text-4xl lg:text-6xl font-bold text-black/80">
               Fullstack Web
-              <br /> Developer <span className="wave">👋🏻</span>
+              <br /> Developer{" "}
+              <span className="wave">
+                <Image src={hand} alt="hand" width={60} height={60} />
+              </span>
             </h1>
             <p className="max-w-[500px] text-black/50">
               Hi, Im Kacper Siniło. A passionate Fullstack Developer, who is
@@ -140,6 +144,7 @@ function Home() {
                   src={skill.src}
                   className="hover:scale-105 transition duration-200 peer hover:cursor-help"
                   width={50}
+                  alt={skill.alt}
                 />
 
                 {skill.text && (

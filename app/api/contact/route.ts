@@ -2,6 +2,17 @@ import { type NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+let nodemailer = require("nodemailer");
+const transporter = nodemailer.createTransport({
+  port: 465,
+  host: "smtp.gmail.com",
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASSWORD,
+  },
+  secure: true,
+});
+
 export async function POST(req: Request) {
   const formValidationSchema = z.object({
     email: z.string().email(),
@@ -17,7 +28,24 @@ export async function POST(req: Request) {
     return new NextResponse("Something went wrong", { status: 400 });
   }
 
-  //   const { name, email, zipcode, subcribe } = response.data;
+  const { name, email, message } = response.data;
+
+  const mailData = {
+    from: email,
+    to: "ksiniloit@gmail.com",
+    subject: `FROM MESSAGE FORM (${name})`,
+    text: message,
+    html: message,
+  };
+
+  transporter.sendMail(mailData, function (err: any, info: any) {
+    if (err) {
+      console.log(err);
+      return new NextResponse("Something went wrong", { status: 400 });
+    } else {
+      console.log(info);
+    }
+  });
 
   return NextResponse.json(response.data);
 }
