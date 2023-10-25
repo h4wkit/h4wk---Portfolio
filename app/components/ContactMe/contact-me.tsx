@@ -5,7 +5,7 @@ import Link from "next/link";
 function ContactMe() {
   return (
     <section
-      className="bg-white py-28 flex flex-col items-center justify-center w-full px-5"
+      className="bg-white py-28 flex flex-col items-center justify-center w-full px-5 text-center"
       id="contact"
     >
       <h2 className="text-blue-500 font-extrabold text-lg">ABOUT ME</h2>

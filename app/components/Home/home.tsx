@@ -1,7 +1,9 @@
 import Image from "next/image";
-import avatar from "@/public/avatar.png";
 import Link from "next/link";
-import { Github, Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
+
+import cv_icon from "@/public/cv-icon.png";
+import avatar from "@/public/avatar.png";
 
 function Home() {
   const skills = [
@@ -80,20 +82,26 @@ function Home() {
               <br /> Developer <span className="wave">👋🏻</span>
             </h1>
             <p className="max-w-[500px] text-black/50">
-              Hi, Im Kacper Siniło. A passionate Fullstack Developer, who
-              is also a gym rat, and a coffee enjoyer. 💪☕
+              Hi, Im Kacper Siniło. A passionate Fullstack Developer, who is
+              also a gym rat, and a coffee enjoyer. 💪☕
             </p>
             <div className="flex space-x-4 text-black/50 justify-center lg:justify-start">
               <Link href={"https://github.com/kacper3123"} target="_blank">
-                <Github className="h-8 w-8 hover:cursor-pointer hover:scale-125 transition duration-300" />
+                <Github className="h-8 w-8 text-black/50 hover:text-black hover:cursor-pointer" />
               </Link>
-              {/* <Link href={""}>
-                <Linkedin className="h-8 w-8 hover:cursor-pointer hover:scale-125 transition duration-300" />
-              </Link> */}
-              <Link href={""}>
-                <p className="text-3xl font-bold hover:cursor-pointer hover:scale-125 transition duration-300">
-                  CV
-                </p>
+              <Link
+                href={
+                  "https://drive.google.com/file/d/1r7DxqplO8fSZpTXW9tBzlpi-LQtnF9Xa/view?usp=sharing"
+                }
+                target="blank"
+              >
+                <Image
+                  src={cv_icon.src}
+                  width={32}
+                  height={32}
+                  alt={"cv"}
+                  className="opacity-50 hover:opacity-100 cursor-pointer"
+                />
               </Link>
             </div>
           </article>
@@ -116,6 +124,7 @@ function Home() {
               }}
               loading="eager"
               quality={100}
+              priority={true}
             />
           </div>
         </article>
@@ -126,20 +135,12 @@ function Home() {
           <div className="grid grid-cols-5 gap-3 md:flex">
             {skills.map((skill, index) => (
               <div key={index} className="relative mx-2">
-                {/* <Image
+                <img
+                  // type="image/svg+xml"
                   src={skill.src}
-                  alt={skill.alt}
-                  width={50}
-                  height={50}
-                  className="hover:scale-105 transition duration-200 peer hover:cursor-help"
-                  loading="eager"
-                /> */}
-                <object
-                  type="image/svg+xml"
-                  data={skill.src}
                   className="hover:scale-105 transition duration-200 peer hover:cursor-help"
                   width={50}
-                ></object>
+                />
 
                 {skill.text && (
                   <div
