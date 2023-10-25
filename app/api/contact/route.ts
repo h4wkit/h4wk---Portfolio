@@ -38,13 +38,17 @@ export async function POST(req: Request) {
     html: message,
   };
 
-  transporter.sendMail(mailData, function (err: any, info: any) {
-    if (err) {
-      console.log(err);
-      return new NextResponse("Something went wrong", { status: 400 });
-    } else {
-      console.log(info);
-    }
+  await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err: any, info: any) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
 
   return NextResponse.json(response.data);
