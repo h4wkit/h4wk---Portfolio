@@ -136,7 +136,7 @@ function Home() {
           <p className="border-b-2 md:border-b-0 md:border-r-2 p-5">
             Tech Stack
           </p>
-          <div className="grid grid-cols-5 gap-3 md:flex">
+          <div className="grid grid-cols-5 gap-3 md:flex overflow-hidden">
             {skills.map((skill, index) => (
               <div key={index} className="relative mx-2">
                 <img
