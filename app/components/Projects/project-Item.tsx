@@ -32,7 +32,7 @@ function ProjectItem({
   return (
     <article
       className={cn(
-        "rounded-2xl shadow-md lg:w-[990px] bg-white flex flex-col p-5 justify-center lg:justify-between items-center",
+        "rounded-2xl shadow-md lg:w-[990px] bg-white flex flex-col p-5 justify-center lg:justify-between items-center lg:items-start",
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       )}
     >
@@ -40,8 +40,9 @@ function ProjectItem({
         src={image}
         width={500}
         height={0}
-        alt="gif"
+        alt="project"
         style={{ height: "auto" }}
+        className="pt-0 lg:pt-7"
       />
 
       {/* <div className="w-full lg:w-[500px] h-[350px] flex-shrink bg-blue-500" /> */}

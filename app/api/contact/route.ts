@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 
   const mailData = {
     from: email,
-    to: "ksiniloit@gmail.com",
+    to: "h4wkit@gmail.com",
     subject: `FORM MESSAGE FROM (${name})`,
     text: message,
     html: message,

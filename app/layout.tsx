@@ -11,7 +11,7 @@ const font = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Kacper Siniło",
+  title: "Kacper Siniło - Fullstack Developer",
   description: "Kacper Siniło Portfolio",
 };
 

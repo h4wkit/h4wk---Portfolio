@@ -26,7 +26,7 @@ function Projects() {
           color: "pink",
         },
       ],
-      github: "https://github.com/kacper3123/mokarico-caffe",
+      github: "https://github.com/h4wkit/mokarico-coffee",
       demoLink: "https://mokarico-caffe.vercel.app/",
     },
   ];

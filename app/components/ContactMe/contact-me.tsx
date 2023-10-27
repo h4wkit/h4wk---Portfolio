@@ -18,12 +18,7 @@ function ContactMe() {
             <Mail className="h-8 w-8 text-blue-500" />
             <p className="text-blue-500 font-bold">MAIL</p>
           </div>
-          <Link
-            href={"mailto:ksiniloit@gmail.com"}
-            className="text-black/50 hover:text-blue-500 cursor-pointer"
-          >
-            ksiniloit@gmail.com
-          </Link>
+          <p className="text-black/50 hover:text-blue-500">h4wkit@gmail.com</p>
         </div>
 
         <div className="flex flex-col space-y-12 lg:space-y-0 items-left text-left items-center">
