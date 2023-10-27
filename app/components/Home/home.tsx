@@ -71,7 +71,7 @@ function Home() {
   ];
 
   return (
-    <div className="min-h-full bg-gray-50 pb-24 lg:py-36">
+    <div className="min-h-full bg-gray-50 pb-24 lg:py-36  overflow-hidden">
       <section
         id="home"
         className="w-full flex flex-col items-center px-3 pt-36 space-y-24"
@@ -132,7 +132,7 @@ function Home() {
             />
           </div>
         </article>
-        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-2 flex-col md:flex-row mt-10 flex-wrap overflow-hidden">
+        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-2 flex-col md:flex-row mt-10 flex-wrap">
           <p className="border-b-2 md:border-b-0 md:border-r-2 p-5">
             Tech Stack
           </p>
