@@ -132,11 +132,11 @@ function Home() {
             />
           </div>
         </article>
-        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-2 flex-col md:flex-row mt-10 flex-wrap ">
+        <div className="flex items-center space-y-4 md:space-y-0 md:space-x-2 flex-col md:flex-row mt-10 flex-wrap overflow-hidden">
           <p className="border-b-2 md:border-b-0 md:border-r-2 p-5">
             Tech Stack
           </p>
-          <div className="grid grid-cols-5 gap-3 md:flex overflow-hidden">
+          <div className="grid grid-cols-5 gap-3 md:flex">
             {skills.map((skill, index) => (
               <div key={index} className="relative mx-2">
                 <img
