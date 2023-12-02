@@ -36,23 +36,16 @@ function ProjectItem({
         reversed ? "lg:flex-row-reverse" : "lg:flex-row"
       )}
     >
-      <Image
-        src={image}
-        width={500}
-        height={0}
-        alt="project"
-        style={{ height: "auto" }}
-        className="pt-0 lg:pt-7"
-      />
-
-      {/* <div className="w-full lg:w-[500px] h-[350px] flex-shrink bg-blue-500" /> */}
-
-      <div className="max-w-[350px] space-y-5 py-5 text-center">
-        <h1 className="font-bold text-black/80 text-lg">
-          {label} <span className="text-sm">({date})</span>
-        </h1>
-        <p className=" text-black/50 text-md">{desc}</p>
-        <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-col items-center space-y-5">
+        <Image
+          src={image}
+          width={500}
+          height={0}
+          alt="project"
+          style={{ height: "auto" }}
+          className="pt-0 lg:pt-7"
+        />
+        <div className="flex flex-wrap gap-2 lg:justify-left  justify-center ">
           {technologies.map((technology, index) => (
             <div
               className="rounded-md text-white shadow-sm px-3 py-2"
@@ -63,6 +56,18 @@ function ProjectItem({
             </div>
           ))}
         </div>
+      </div>
+      <div
+        className={cn(
+          "max-w-[350px] space-y-5 py-5 text-center lg:text-left",
+          reversed ? "lg:ps-10" : null
+        )}
+      >
+        <h1 className="font-bold text-black/80 text-lg">
+          {label} <span className="text-sm">({date})</span>
+        </h1>
+        <p className=" text-black/50 text-md">{desc}</p>
+
         <div className="flex justify-center space-x-6">
           <Link
             href={github}

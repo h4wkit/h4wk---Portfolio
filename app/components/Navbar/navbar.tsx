@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <div className="w-full h-20 flex justify-between px-10 items-center shadow-lg shadow-gray-100 fixed top-0 z-50 bg-white">
       <Link href={"#home"} className="text-xl font-bold text-black/80">
-        h4wkit.dev
+        kasin-it.dev
       </Link>
       <nav className="hidden md:block">
         <ul className="flex gap-x-6 text-black/80">

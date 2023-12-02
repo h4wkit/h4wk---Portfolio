@@ -1,8 +1,43 @@
 import mokarico from "@/public/mokarico.webp";
+import peak_performance from "@/public/peak-performance.webp";
 import ProjectItem from "./project-Item";
 
 function Projects() {
   const projects = [
+    {
+      image: peak_performance.src,
+      label: "Peak Performance",
+      date: "NOVEMBER 2023",
+      desc: "Peak Performance stands as a groundbreaking web application that empowers users to craft personalized training plans tailored to their unique fitness goals. Using React, NextJS, and ShadcnUI for a sleek interface, the app seamlessly integrates Contentful for fetching articles. Leveraging Incremental Static Regeneration (ISR), Peak Performance ensures a lightning-fast user experience. ",
+      technologies: [
+        {
+          label: "React",
+          color: "blue",
+        },
+        {
+          label: "Supabase",
+          color: "green",
+        },
+        {
+          label: "NextJS",
+          color: "black",
+        },
+        {
+          label: "ShadcnUI",
+          color: "black",
+        },
+        {
+          label: "TailwindCSS",
+          color: "pink",
+        },
+        {
+          label: "Contentful",
+          color: "orange",
+        },
+      ],
+      github: "https://github.com/kasin-it/peak-performance",
+      demoLink: "https://peak-performance-phi.vercel.app",
+    },
     {
       image: mokarico.src,
       label: "Clone Mokarico-Coffee",
@@ -26,7 +61,7 @@ function Projects() {
           color: "pink",
         },
       ],
-      github: "https://github.com/h4wkit/mokarico-coffee",
+      github: "https://github.com/kasin-it/mokarico-coffee",
       demoLink: "https://mokarico-caffe.vercel.app/",
     },
   ];

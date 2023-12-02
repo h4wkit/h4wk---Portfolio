@@ -102,7 +102,7 @@ function Home() {
               also a gym rat, and a coffee enjoyer. 💪☕
             </p>
             <div className="flex space-x-4 text-black/50 justify-center lg:justify-start">
-              <Link href={"https://github.com/h4wkit"} target="_blank">
+              <Link href={"https://github.com/kasin-it"} target="_blank">
                 <Github className="h-8 w-8 text-black/50 hover:text-black hover:cursor-pointer" />
               </Link>
               {/* <Link
